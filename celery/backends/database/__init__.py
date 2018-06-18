@@ -14,9 +14,9 @@ from celery.exceptions import ImproperlyConfigured
 from celery.five import range
 from celery.utils.time import maybe_timedelta
 
-from .models import Task
-from .models import TaskSet
-from .session import SessionManager
+from celery.backends.database.models import Task
+from celery.backends.database.models import TaskSet
+from celery.backends.database.session import SessionManager
 
 try:
     from sqlalchemy.exc import DatabaseError, InvalidRequestError

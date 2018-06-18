@@ -10,7 +10,7 @@ import re
 from collections import Counter
 from fileinput import FileInput
 
-from .base import Command
+from celery.bin.base import Command
 
 __all__ = ('logtool',)
 

@@ -5,7 +5,7 @@ from celery import bootsteps
 from celery.five import items
 from celery.utils.log import get_logger
 
-from .events import Events
+from celery.worker.consumer.events import Events
 
 __all__ = ('Mingle',)
 

@@ -23,7 +23,8 @@ if STATICA_HACK:  # pragma: no cover
     # pylint, etc.) into knowing the types of these symbols, and what
     # they contain.
     from celery.canvas import group, chord, subtask
-    from .base import BaseTask, Task, PeriodicTask, task, periodic_task
+    from celery.task.base import (BaseTask, Task, PeriodicTask, task,
+                                  periodic_task)
 
 
 class module(LazyModule):

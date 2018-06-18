@@ -6,7 +6,7 @@ from kombu.common import QoS, ignore_errors
 from celery import bootsteps
 from celery.utils.log import get_logger
 
-from .mingle import Mingle
+from celery.worker.consumer.mingle import Mingle
 
 __all__ = ('Tasks',)
 

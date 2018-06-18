@@ -8,7 +8,7 @@ from celery import bootsteps
 from celery.exceptions import WorkerLostError, WorkerShutdown, WorkerTerminate
 from celery.utils.log import get_logger
 
-from . import state
+from celery.worker import state
 
 __all__ = ('asynloop', 'synloop')
 

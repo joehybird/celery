@@ -8,8 +8,8 @@ from functools import partial
 
 from kombu.entity import Exchange, Queue
 
-from .functional import memoize
-from .text import simple_format
+from celery.utils.functional import memoize
+from celery.utils.text import simple_format
 
 #: Exchange for worker direct queues.
 WORKER_DIRECT_EXCHANGE = Exchange('C.dq2')
@@ -85,7 +85,7 @@ def node_format(s, name, **extra):
 
 
 def _fmt_process_index(prefix='', default='0'):
-    from .log import current_process_index
+    from celery.utils.log import current_process_index
     index = current_process_index()
     return '{0}{1}'.format(prefix, index) if index else default
 

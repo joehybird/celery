@@ -9,7 +9,7 @@ from kombu.utils.url import _parse_url
 
 from celery.exceptions import ImproperlyConfigured
 
-from .base import KeyValueStoreBackend
+from celery.backends.base import KeyValueStoreBackend
 
 try:
     import couchbase_ffi  # noqa

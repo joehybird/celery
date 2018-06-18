@@ -20,7 +20,7 @@ from celery.utils.saferepr import saferepr
 from celery.utils.text import indent as textindent
 from celery.utils.time import maybe_make_aware
 
-from . import routes as _routes
+from celery.app import routes as _routes
 
 __all__ = ('AMQP', 'Queues', 'task_message')
 

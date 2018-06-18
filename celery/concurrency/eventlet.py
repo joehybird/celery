@@ -9,7 +9,7 @@ from kombu.five import monotonic
 
 from celery import signals  # noqa
 
-from . import base  # noqa
+from celery.concurrency import base  # noqa
 
 __all__ = ('TaskPool',)
 

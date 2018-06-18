@@ -9,10 +9,10 @@ from kombu.common import ignore_errors
 from kombu.utils.encoding import bytes_to_str
 from kombu.utils.imports import symbol_by_name
 
-from .five import bytes_if_py2, values, with_metaclass
-from .utils.graph import DependencyGraph, GraphFormatter
-from .utils.imports import instantiate, qualname
-from .utils.log import get_logger
+from celery.five import bytes_if_py2, values, with_metaclass
+from celery.utils.graph import DependencyGraph, GraphFormatter
+from celery.utils.imports import instantiate, qualname
+from celery.utils.log import get_logger
 
 try:
     from greenlet import GreenletExit

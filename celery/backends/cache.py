@@ -9,7 +9,7 @@ from celery.exceptions import ImproperlyConfigured
 from celery.five import PY3
 from celery.utils.functional import LRUCache
 
-from .base import KeyValueStoreBackend
+from celery.backends.base import KeyValueStoreBackend
 
 __all__ = ('CacheBackend',)
 

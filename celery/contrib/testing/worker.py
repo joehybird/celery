@@ -77,7 +77,7 @@ def start_worker(app,
                               logfile=logfile,
                               **kwargs) as worker:
         if perform_ping_check:
-            from .tasks import ping
+            from celery.contrib.tasks import ping
             with allow_join_result():
                 assert ping.delay().get(timeout=ping_task_timeout) == 'pong'
 

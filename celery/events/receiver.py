@@ -12,7 +12,7 @@ from celery import uuid
 from celery.app import app_or_default
 from celery.utils.time import adjust_timestamp
 
-from .event import get_exchange
+from celery.events.event import get_exchange
 
 __all__ = ('EventReceiver',)
 

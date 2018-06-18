@@ -5,7 +5,7 @@ from kombu.serialization import (
     registry, disable_insecure_serializers as _disable_insecure_serializers,
 )
 from celery.exceptions import ImproperlyConfigured
-from .serialization import register_auth
+from celery.security.serialization import register_auth
 
 SSL_NOT_INSTALLED = """\
 You need to install the pyOpenSSL library to use the auth serializer.

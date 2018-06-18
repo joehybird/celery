@@ -13,7 +13,7 @@ from celery.five import items
 from celery.utils.nodenames import anon_nodename
 from celery.utils.time import utcoffset
 
-from .event import Event, get_exchange, group_from
+from celery.events.event import Event, get_exchange, group_from
 
 __all__ = ('EventDispatcher',)
 

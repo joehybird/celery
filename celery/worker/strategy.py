@@ -13,8 +13,8 @@ from celery.utils.log import get_logger
 from celery.utils.saferepr import saferepr
 from celery.utils.time import timezone
 
-from .request import create_request_cls
-from .state import task_reserved
+from celery.worker.request import create_request_cls
+from celery.worker.state import task_reserved
 
 __all__ = ('default',)
 

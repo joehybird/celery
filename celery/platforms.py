@@ -23,9 +23,9 @@ from billiard.compat import close_open_fds, get_fdmax
 from kombu.utils.compat import maybe_fileno
 from kombu.utils.encoding import safe_str
 
-from .exceptions import SecurityError
-from .five import items, reraise, string_t
-from .local import try_import
+from celery.exceptions import SecurityError
+from celery.five import items, reraise, string_t
+from celery.local import try_import
 
 try:
     from billiard.process import current_process

@@ -11,7 +11,7 @@ from celery.exceptions import ImproperlyConfigured
 from celery.five import string
 from celery.utils.log import get_logger
 
-from .base import KeyValueStoreBackend
+from celery.backends.base import KeyValueStoreBackend
 
 try:
     import boto3

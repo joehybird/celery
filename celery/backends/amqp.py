@@ -14,7 +14,7 @@ from celery.five import monotonic, range
 from celery.utils import deprecated
 from celery.utils.log import get_logger
 
-from .base import BaseBackend
+from celery.backends.base import BaseBackend
 
 __all__ = ('BacklogLimitExceeded', 'AMQPBackend')
 

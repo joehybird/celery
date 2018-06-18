@@ -10,7 +10,7 @@ from sqlalchemy.types import PickleType
 from celery import states
 from celery.five import python_2_unicode_compatible
 
-from .session import ResultModelBase
+from celery.backends.database.session import ResultModelBase
 
 __all__ = ('Task', 'TaskSet')
 

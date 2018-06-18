@@ -22,9 +22,9 @@ from celery.utils.imports import instantiate
 from celery.utils.nodenames import gethostname
 from celery.utils.serialization import raise_with_context
 
-from .annotations import resolve_all as resolve_all_annotations
-from .registry import _unpickle_task_v2
-from .utils import appstr
+from celery.app.annotations import resolve_all as resolve_all_annotations
+from celery.app.registry import _unpickle_task_v2
+from celery.app.utils import appstr
 
 __all__ = ('Context', 'Task')
 

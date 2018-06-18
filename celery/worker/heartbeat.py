@@ -9,7 +9,8 @@ from __future__ import absolute_import, unicode_literals
 from celery.signals import heartbeat_sent
 from celery.utils.sysinfo import load_average
 
-from .state import SOFTWARE_INFO, active_requests, all_total_count
+from celery.worker.state import (SOFTWARE_INFO, active_requests,
+                                 all_total_count)
 
 __all__ = ('Heart',)
 

@@ -17,7 +17,7 @@ from kombu.utils.encoding import safe_str
 
 from celery.five import string_t, text_t
 
-from .term import colored
+from celery.utils.term import colored
 
 __all__ = (
     'ColorFormatter', 'LoggingProxy', 'base_logger',

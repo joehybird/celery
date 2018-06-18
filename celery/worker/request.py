@@ -29,7 +29,7 @@ from celery.utils.nodenames import gethostname
 from celery.utils.serialization import get_pickled_exception
 from celery.utils.time import maybe_iso8601, maybe_make_aware, timezone
 
-from . import state
+from celery.worker import state
 
 __all__ = ('Request',)
 

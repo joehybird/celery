@@ -19,7 +19,7 @@ from celery.utils.functional import dictfilter
 from celery.utils.log import get_logger
 from celery.utils.time import humanize_seconds
 
-from . import async, base
+from celery.backends import async, base
 
 try:
     from urllib.parse import unquote

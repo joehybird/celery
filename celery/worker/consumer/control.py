@@ -10,7 +10,7 @@ from celery import bootsteps
 from celery.utils.log import get_logger
 from celery.worker import pidbox
 
-from .tasks import Tasks
+from celery.worker.consumer.tasks import Tasks
 
 __all__ = ('Control',)
 

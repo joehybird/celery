@@ -14,7 +14,7 @@ from functools import reduce
 from importlib import import_module
 from types import ModuleType
 
-from .five import PY3, bytes_if_py2, items, string, string_t
+from celery.five import PY3, bytes_if_py2, items, string, string_t
 
 __all__ = ('Proxy', 'PromiseProxy', 'try_import', 'maybe_evaluate')
 

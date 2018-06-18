@@ -1,14 +1,14 @@
 """Worker consumer."""
 from __future__ import absolute_import, unicode_literals
-from .consumer import Consumer
-from .agent import Agent
-from .connection import Connection
-from .control import Control
-from .events import Events
-from .gossip import Gossip
-from .heart import Heart
-from .mingle import Mingle
-from .tasks import Tasks
+from celery.worker.consumer.consumer import Consumer
+from celery.worker.consumer.agent import Agent
+from celery.worker.consumer.connection import Connection
+from celery.worker.consumer.control import Control
+from celery.worker.consumer.events import Events
+from celery.worker.consumer.gossip import Gossip
+from celery.worker.consumer.heart import Heart
+from celery.worker.consumer.mingle import Mingle
+from celery.worker.consumer.tasks import Tasks
 
 __all__ = (
     'Consumer', 'Agent', 'Connection', 'Control',

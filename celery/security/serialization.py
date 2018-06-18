@@ -8,9 +8,9 @@ from kombu.utils.encoding import bytes_to_str, ensure_bytes, str_to_bytes
 from celery.five import bytes_if_py2
 from celery.utils.serialization import b64decode, b64encode
 
-from .certificate import Certificate, FSCertStore
-from .key import PrivateKey
-from .utils import reraise_errors
+from celery.security.certificate import Certificate, FSCertStore
+from celery.security.key import PrivateKey
+from celery.security.utils import reraise_errors
 
 __all__ = ('SecureSerializer', 'register_auth')
 

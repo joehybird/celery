@@ -39,12 +39,13 @@ from celery.utils.time import (get_exponential_backoff_interval, timezone,
                                to_utc)
 
 # Load all builtin tasks
-from . import builtins  # noqa
-from . import backends
-from .annotations import prepare as prepare_annotations
-from .defaults import find_deprecated_settings
-from .registry import TaskRegistry
-from .utils import (AppPickler, Settings, _new_key_to_old, _old_key_to_new,
+from celery.app import builtins  # noqa
+from celery.app import backends
+from celery.app.annotations import prepare as prepare_annotations
+from celery.app.defaults import find_deprecated_settings
+from celery.app.registry import TaskRegistry
+from celery.app.utils import (AppPickler, Settings,
+                    _new_key_to_old, _old_key_to_new,
                     _unpickle_app, _unpickle_app_v2, appstr, bugreport,
                     detect_settings)
 
@@ -392,7 +393,7 @@ class Celery(object):
             # a different task instance.  This makes sure it will always use
             # the task instance from the current app.
             # Really need a better solution for this :(
-            from . import shared_task
+            from celery.app import shared_task
             return shared_task(*args, lazy=False, **opts)
 
         def inner_create_task_cls(shared=True, filter=None, lazy=True, **opts):

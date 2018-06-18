@@ -8,7 +8,7 @@ from celery import states
 from celery.exceptions import ImproperlyConfigured
 from celery.utils.log import get_logger
 
-from .base import BaseBackend
+from celery.backends.base import BaseBackend
 
 try:  # pragma: no cover
     import cassandra

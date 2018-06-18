@@ -12,7 +12,7 @@ from celery import states
 from celery.exceptions import ImproperlyConfigured
 from celery.five import items, string_t
 
-from .base import BaseBackend
+from celery.backends.base import BaseBackend
 
 try:
     import pymongo

@@ -8,7 +8,7 @@ from kombu.common import ignore_errors
 
 from celery import bootsteps
 
-from .connection import Connection
+from celery.worker.consumer.connection import Connection
 
 __all__ = ('Events',)
 

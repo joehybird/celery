@@ -11,7 +11,7 @@ from celery.utils.collections import AttributeDict
 from celery.utils.functional import pass1
 from celery.utils.log import get_logger
 
-from . import control
+from celery.worker import control
 
 __all__ = ('Pidbox', 'gPidbox')
 

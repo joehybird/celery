@@ -6,8 +6,8 @@ from contextlib import contextmanager
 
 import pytest
 
-from .testing import worker
-from .testing.app import TestApp, setup_default_app
+from celery.contrib.testing import worker
+from celery.contrib.testing.app import TestApp, setup_default_app
 
 NO_WORKER = os.environ.get('NO_WORKER')
 

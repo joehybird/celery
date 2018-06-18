@@ -17,9 +17,9 @@ from pytz import utc
 
 from celery.five import PY3, python_2_unicode_compatible, string_t
 
-from .functional import dictfilter
-from .iso8601 import parse_iso8601
-from .text import pluralize
+from celery.utils.functional import dictfilter
+from celery.utils.iso8601 import parse_iso8601
+from celery.utils.text import pluralize
 
 __all__ = (
     'LocalTimezone', 'timezone', 'maybe_timedelta',

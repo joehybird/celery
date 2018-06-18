@@ -12,8 +12,8 @@ from itertools import chain, count
 from celery.five import (PY3, Empty, items, keys, monotonic,
                          python_2_unicode_compatible, values)
 
-from .functional import first, uniq
-from .text import match_case
+from celery.utils.functional import first, uniq
+from celery.utils.text import match_case
 
 try:
     # pypy: dicts are ordered in recent versions

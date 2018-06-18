@@ -14,7 +14,7 @@ from celery.five import values
 from celery.utils.log import get_logger
 from celery.utils.objects import Bunch
 
-from .mingle import Mingle
+from celery.worker.consumer.mingle import Mingle
 
 __all__ = ('Gossip',)
 

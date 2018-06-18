@@ -19,7 +19,7 @@ from celery.utils.time import humanize_seconds
 try:
     from weakref import WeakMethod
 except ImportError:
-    from .weakref_backports import WeakMethod  # noqa
+    from celery.utils.dispatch.weakref_backports import WeakMethod  # noqa
 
 __all__ = ('Signal',)
 

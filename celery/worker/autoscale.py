@@ -21,8 +21,8 @@ from celery.five import monotonic
 from celery.utils.log import get_logger
 from celery.utils.threads import bgThread
 
-from . import state
-from .components import Pool
+from celery.worker import state
+from celery.worker.components import Pool
 
 __all__ = ('Autoscaler', 'WorkerComponent')
 

@@ -7,8 +7,8 @@ from celery._state import (
     app_or_default, enable_trace, disable_trace,
     push_current_task, pop_current_task,
 )
-from .base import Celery
-from .utils import AppPickler
+from celery.app.base import Celery
+from celery.app.utils import AppPickler
 
 __all__ = (
     'Celery', 'AppPickler', 'app_or_default', 'default_app',

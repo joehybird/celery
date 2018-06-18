@@ -46,7 +46,7 @@ del _temp
 del re
 
 if os.environ.get('C_IMPDEBUG'):  # pragma: no cover
-    from .five import builtins
+    from celery.five import builtins
 
     def debug_import(name, locals=None, globals=None,
                      fromlist=None, level=-1, real_import=builtins.__import__):
@@ -147,7 +147,7 @@ def maybe_patch_concurrency(argv=sys.argv,
 
 
 # Lazy loading
-from . import local  # noqa
+from celery import local  # noqa
 
 
 # this just creates a new module, that imports stuff on first attribute

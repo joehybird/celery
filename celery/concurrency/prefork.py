@@ -20,7 +20,7 @@ from celery.five import items
 from celery.utils.functional import noop
 from celery.utils.log import get_logger
 
-from .asynpool import AsynPool
+from celery.concurrency.asynpool import AsynPool
 
 __all__ = ('TaskPool', 'process_initializer', 'process_destructor')
 

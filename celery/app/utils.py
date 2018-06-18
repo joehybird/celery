@@ -18,8 +18,9 @@ from celery.utils.collections import ConfigurationView
 from celery.utils.imports import import_from_cwd, qualname, symbol_by_name
 from celery.utils.text import pretty
 
-from .defaults import (_OLD_DEFAULTS, _OLD_SETTING_KEYS, _TO_NEW_KEY,
-                       _TO_OLD_KEY, DEFAULTS, SETTING_KEYS, find)
+from celery.app.defaults import (_OLD_DEFAULTS, _OLD_SETTING_KEYS,
+                                 _TO_NEW_KEY, _TO_OLD_KEY, DEFAULTS,
+                                 SETTING_KEYS, find)
 
 __all__ = (
     'Settings', 'appstr', 'bugreport',
@@ -353,7 +354,7 @@ def bugreport(app):
 
 def find_app(app, symbol_by_name=symbol_by_name, imp=import_from_cwd):
     """Find app by name."""
-    from .base import Celery
+    from celery.app.base import Celery
 
     try:
         sym = symbol_by_name(app, imp=imp)

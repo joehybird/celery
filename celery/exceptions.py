@@ -55,7 +55,7 @@ from billiard.exceptions import (SoftTimeLimitExceeded, Terminated,
                                  TimeLimitExceeded, WorkerLostError)
 from kombu.exceptions import OperationalError
 
-from .five import python_2_unicode_compatible, string_t
+from celery.five import python_2_unicode_compatible, string_t
 
 __all__ = (
     # Warnings

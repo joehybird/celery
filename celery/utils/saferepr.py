@@ -21,7 +21,7 @@ from pprint import _recursion
 
 from celery.five import PY3, items, range, text_t
 
-from .text import truncate
+from celery.utils.text import truncate
 
 __all__ = ('saferepr', 'reprstream')
 

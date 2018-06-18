@@ -13,7 +13,7 @@ functions are called whenever a signal is called.
 """
 from __future__ import absolute_import, unicode_literals
 
-from .utils.dispatch import Signal
+from celery.utils.dispatch import Signal
 
 __all__ = (
     'before_task_publish', 'after_task_publish',

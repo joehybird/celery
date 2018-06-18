@@ -44,7 +44,7 @@ class UnitLogging(symbol_by_name(Celery.log_cls)):
 def TestApp(name=None, config=None, enable_logging=False, set_as_current=False,
             log=UnitLogging, backend=None, broker=None, **kwargs):
     """App used for testing."""
-    from . import tasks  # noqa
+    from celery.contrib.testing import tasks  # noqa
     config = dict(deepcopy(DEFAULT_TEST_CONFIG), **config or {})
     if broker is not None:
         config.pop('broker_url', None)

@@ -10,7 +10,7 @@ from kombu.utils.encoding import bytes_to_str
 from celery.exceptions import SecurityError
 from celery.five import values
 
-from .utils import crypto, reraise_errors
+from celery.security.utils import crypto, reraise_errors
 
 __all__ = ('Certificate', 'CertStore', 'FSCertStore')
 

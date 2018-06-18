@@ -17,8 +17,8 @@ from celery.utils.log import get_logger
 from celery.utils.serialization import jsonify, strtobool
 from celery.utils.time import rate
 
-from . import state as worker_state
-from .request import Request
+from celery.worker import state as worker_state
+from celery.worker.request import Request
 
 __all__ = ('Panel',)
 

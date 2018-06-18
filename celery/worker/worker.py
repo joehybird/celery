@@ -35,7 +35,7 @@ from celery.utils.nodenames import default_nodename, worker_direct
 from celery.utils.text import str_to_list
 from celery.utils.threads import default_socket_timeout
 
-from . import state
+from celery.worker import state
 
 try:
     import resource
